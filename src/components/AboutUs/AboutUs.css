@@ -14,8 +14,8 @@
   
   .aboutUsImage {
     max-width: 280px;
-    will-change: opacity, transform;
-    transition: .9s all ease-in-out;
+    will-change: opacity;
+    transition: .3s all ease-in-out;
   }
   
   .aboutUsLink {
@@ -24,6 +24,5 @@
   }
   
   .aboutUsImage:hover {
-    opacity: .8;
-    transform: scale(1.04);
+    opacity: .88;
   }

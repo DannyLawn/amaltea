@@ -16,8 +16,8 @@
 }
 
 .BackButton:hover {
-    background-color: #f9f9f9;
-    transform: scale(0.95);
+    background-color: #fcfcfc;
+    transform: scale(0.96);
 }
 
 .backLogo {
