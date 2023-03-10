@@ -1,0 +1,16 @@
+.MainTitle {
+  padding: 60px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  margin: 0;
+  color: #000;
+  font-size: 29px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: default;
+}

@@ -1,0 +1,263 @@
+/* .Calculator{
+
+} */
+
+.calculatorTitle {
+    margin: 0 auto 10px;
+    font-weight: 600;
+}
+
+.calculatorSubtitle {
+    margin: 0 auto;
+    font-weight: 500;
+    max-width: 680px;
+}
+
+.calculatorContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 60px 160px;
+    border: 2px solid rgba(0, 0, 0, 0.351);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 20px 60px 60px;
+    background-color: #ffffff8d;
+}
+
+.calculatorName {
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(176, 10, 82);
+}
+
+.calculateContainer {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.calculateList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.calculateItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.241);
+}
+
+.itemName {
+    width: 420px;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0;
+    max-width: 420px;
+    text-align: left;
+}
+
+.nameOptionContainer {
+    padding: 20px 0;
+    display: flex;
+    flex-direction:  column;
+    gap: 5px;
+    border: 0;
+}
+
+.nameOption {
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.811);
+}
+
+.productsAttention {
+    margin: 20px 0 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(207, 16, 76);
+    text-transform: uppercase;
+}
+
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+}
+
+.productPrice {
+    margin-right: 10px;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.priceCurrency {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.countContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 220px;
+}
+
+.countTextContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+}
+
+.productCount {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(176, 10, 82);
+}
+
+.productCountCapture {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.countButtonContainer {
+    margin-left: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.countButton {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+    font-weight: 500;
+    border-radius: 100px;
+    border: 1px solid #828282;
+    background-color: #F0F0F0;
+    cursor: pointer;
+}
+
+.countButton:hover {
+    background-color: #dbdbdb;
+}
+
+.countPriceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 80px 20px 0;
+}
+
+.totalPriceContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 40px 40px 0;
+}
+
+.totalPrice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.priceCapture {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.priceNumber {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+    color: rgb(176, 10, 82);
+}
+
+.totalPriceCurrency {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.calculatorSaveButton {
+    margin-top: 40px;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 500;
+    background-color: #3397aee2;
+    color: white;
+    cursor: pointer;
+    will-change: background-color;
+    transition: all .1s ease-out;
+}
+
+.calculatorSaveButton:hover {
+    background-color: #3397ae;
+}
+
+
+/* .totalDiscount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} */
+
+/* .priceDiscountCapture {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.priceDiscountNumber {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(176, 10, 82);
+}
+
+.priceDiscountCurrency {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.discountContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 0;
+    width: 100%;
+}
+
+.totalDiscountPrice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.discountCapture {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.discountNumber {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(176, 10, 82);
+} */

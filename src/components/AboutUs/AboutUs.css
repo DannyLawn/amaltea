@@ -1,0 +1,29 @@
+.AboutUs {
+    box-sizing: border-box;
+    padding: 80px 0;
+  }
+  
+  .aboutUsText {
+    margin: 0 auto 30px;
+    max-width: 740px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: default;
+  }
+
+  
+  .aboutUsImage {
+    max-width: 280px;
+    will-change: opacity, transform;
+    transition: .9s all ease-in-out;
+  }
+  
+  .aboutUsLink {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .aboutUsImage:hover {
+    opacity: .8;
+    transform: scale(1.04);
+  }
