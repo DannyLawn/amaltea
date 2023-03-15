@@ -24,7 +24,6 @@
 .benefitListIcon {
   width: 70px;
   object-fit: contain;
-  will-change: transform;
 }
 
 .benefitText {
@@ -32,7 +31,6 @@
   font-size: 16px;
   text-align: start;
   cursor: default;
-  will-change: transform;
 }
 
 .benefitItem:nth-child(1) {

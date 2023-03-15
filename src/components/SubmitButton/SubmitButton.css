@@ -1,0 +1,26 @@
+.submitButton {
+    margin-top: 40px;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 500;
+    background-color: #3397aeee;
+    color: white;
+    cursor: pointer;
+    will-change: background-color;
+    transition: all .1s ease-out;
+}
+
+.submitButton:hover {
+    background-color: #2f8fa4;
+}
+
+.submitButton_disabled {
+    cursor: default;
+    background-color: #11323a6b;
+}
+
+.submitButton_disabled:hover {
+    background-color: #11323a6b;
+}

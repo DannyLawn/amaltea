@@ -1,12 +1,12 @@
 .App-header {
-  padding: 10px 0;
+  padding: 20px 0;
   display: flex;
   gap: 30px;
   justify-content: center;
 }
 
 .headerLogo {
-  width: 110px;
+  width: 100px;
   object-fit: contain;
   pointer-events: none;
 }

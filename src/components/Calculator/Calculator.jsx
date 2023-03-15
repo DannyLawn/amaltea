@@ -2,6 +2,7 @@ import { addAllProducts, addProduct, removeProduct, updateOptionProduct, updateP
 import { useEffect, useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { products, sections } from '../../utils/data';
+import SubmitButton from '../SubmitButton/SubmitButton';
 import './Calculator.css';
 
 const Calculator = () => {
@@ -886,13 +887,18 @@ const Calculator = () => {
                         </div> */}
 
                     </div>
-                    <button className='calculatorSaveButton'>Сохранить</button>
+                    
+                    <SubmitButton />
 
 
                 </div>
+                    <div className='specialOffer'>
+                        <h3 className='specialOffer__title'>возможно индивидуальное предложение, рабочее время: пн-пт 08:00–17:00</h3>
+                    </div>
 
 
             </div>
+            
 
         </section>
     );

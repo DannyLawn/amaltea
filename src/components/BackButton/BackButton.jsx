@@ -11,13 +11,14 @@ function BackButton() {
     const onClickButton = () => {
         dispatch(closeDivision());
         dispatch(clearAllProducts());
+        window.scrollTo(0, 0);
     }
 
     return (
-        <a className='BackButton' onClick={()=>onClickButton()}>
+        <button className='BackButton' onClick={()=>onClickButton()}>
             <img src={backLogo} className="backLogo" alt="logo" />
             <p className='backCaption'>Назад</p>
-        </a>
+        </button>
     )
 
 }
