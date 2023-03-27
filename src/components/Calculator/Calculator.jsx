@@ -149,9 +149,6 @@ const Calculator = () => {
     }, [psySectionProducts])
 
 
-
-
-
     return (
         <section className='Calculator'>
             <div className='titleContainer'>

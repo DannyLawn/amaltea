@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   openedDivision: false,
+  openedPopup: false,
   divisionsSection: true,
   aboutUsSection: true,
   mainTitleSection: true,
@@ -30,10 +31,16 @@ const divisionsNavigationSlice = createSlice({
         return {
           ...initialState
         }
+      },
+      openPopup(state) {
+        state.openedPopup = true
+      },
+      closePopup(state) {
+        state.openedPopup = false
       }
   },
 })
 
 export default divisionsNavigationSlice.reducer;
 
-export const { openDivision, closeDivision } = divisionsNavigationSlice.actions;
+export const { openDivision, closeDivision, openPopup, closePopup } = divisionsNavigationSlice.actions;

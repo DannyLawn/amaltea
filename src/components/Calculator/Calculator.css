@@ -239,6 +239,7 @@
     margin: 0;
     line-height: 50px;
     text-align: center;
+    will-change: transform;
     text-transform: uppercase;
     transform: translateX(100%);
     animation: marquee 24s linear infinite;

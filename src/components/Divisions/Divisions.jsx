@@ -1,4 +1,5 @@
 import Calculator from '../Calculator/Calculator.jsx';
+import Popup from '../Popup/Popup.jsx';
 import { divisions } from '../../utils/data.js';
 import { openDivision } from '../../services/slices/divisions-navigation-slice.js';
 import { useDispatch, useSelector } from 'react-redux';
@@ -7,13 +8,13 @@ import './Divisions.css';
 function Divisions() {
 
   const dispatch = useDispatch();
-  const { openedDivision, divisionsSection  } = useSelector(store => store.divisionsNavigation);
+  const { openedDivision, divisionsSection, openedPopup  } = useSelector(store => store.divisionsNavigation);
 
 
   function clickDivision(division) {
     dispatch(openDivision({...division}));
     window.scrollTo(0, 0);
-  }
+  }  
 
   return (
     <section className='Divisions'>
@@ -33,6 +34,8 @@ function Divisions() {
       )}
 
       {openedDivision && (<Calculator />)}
+
+      {openedPopup && (<Popup />)}
       </section>
       
       )
