@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { openPopup } from '../../services/slices/divisions-navigation-slice';
+import { addProducts } from '../../services/slices/order-data-slice';
 import { useSelector, useDispatch } from 'react-redux';
 
 import './SubmitButton.css';
@@ -21,15 +22,16 @@ function SubmitButton() {
     },[addedProducts]);
 
      //попап
-     const handleOpenPopup = () => {
+     const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        dispatch(addProducts(addedProducts));
         dispatch(openPopup());
     }
 
 
-
-
     return (
-        validity ? (<button className='submitButton' onClick={()=> handleOpenPopup()}>Оставить заявку</button>) : (<button className='submitButton submitButton_disabled' disabled >Оставить заявку</button>)
+        validity ? (<button className='submitButton' onClick={(e)=> handleSubmit(e)}>Оставить заявку</button>) : (<button className='submitButton submitButton_disabled' disabled >Оставить заявку</button>)
     );
 }
 
