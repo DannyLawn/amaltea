@@ -1,9 +1,10 @@
 {
   "name": "amaltea",
   "version": "0.1.0",
-  "homepage": "http://localhost:3000/",
+  "homepage": "https://dannylawn.github.io/amaltea/",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

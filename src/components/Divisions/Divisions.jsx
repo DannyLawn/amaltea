@@ -3,6 +3,7 @@ import Popup from '../Popup/Popup.jsx';
 import { divisions } from '../../utils/data.js';
 import { openDivision } from '../../services/slices/divisions-navigation-slice.js';
 import { useDispatch, useSelector } from 'react-redux';
+import { clearOrderData } from '../../services/slices/order-data-slice';
 import './Divisions.css';
 
 function Divisions() {
@@ -10,9 +11,9 @@ function Divisions() {
   const dispatch = useDispatch();
   const { openedDivision, divisionsSection, openedPopup  } = useSelector(store => store.divisionsNavigation);
 
-
   function clickDivision(division) {
     dispatch(openDivision({...division}));
+    dispatch(clearOrderData());
     window.scrollTo(0, 0);
   }  
 

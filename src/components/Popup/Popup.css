@@ -89,7 +89,8 @@
     border-radius: 8px;
     font-size: 19px;
     font-weight: 500;
-    background-color: #3397aeee;
+    max-width: 50%;
+    background-color: #3397aed8;
     color: white;
     cursor: pointer;
     will-change: background-color;
@@ -108,6 +109,49 @@
 .popupSubmitButton_disabled:hover {
     background-color: #11323a6b;
 }
+
+
+
+
+.requestLoading { 
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 57px 0 0 30%;
+    color: #2f8fa4;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: default;
+}
+
+.requestLoading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}
+
+
+
+
 
 .popupCaption {
     margin: 40px 0 0;

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { openPopup } from '../../services/slices/divisions-navigation-slice';
-import { addProducts } from '../../services/slices/order-data-slice';
+import { addProducts, clearError } from '../../services/slices/order-data-slice';
 import { useSelector, useDispatch } from 'react-redux';
 
 import './SubmitButton.css';
@@ -24,7 +24,7 @@ function SubmitButton() {
      //попап
      const handleSubmit = (e) => {
         e.preventDefault();
-        
+        dispatch(clearError());
         dispatch(addProducts(addedProducts));
         dispatch(openPopup());
     }

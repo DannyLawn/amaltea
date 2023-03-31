@@ -1,16 +1,25 @@
 import { closePopup } from '../../services/slices/divisions-navigation-slice.js';
-import { addUserData } from '../../services/slices/order-data-slice.js';
 import { useDispatch, useSelector } from 'react-redux';
-import { useCallback, useRef, useState, useEffect } from 'react';
+import { useCallback, useRef, useState, useEffect, useMemo } from 'react';
+import { closeDivision } from '../../services/slices/divisions-navigation-slice.js';
+import { clearAllProducts } from '../../services/slices/products-constructor-slice.js';
+import { successfulSending, failedSending, updateMessage, sendRequest, clearError  } from '../../services/slices/order-data-slice';
+import MessageBoard from '../MessageBoard/MessageBoard.jsx';
+import emailjs from '@emailjs/browser';
 import React from 'react';
 import './Popup.css';
 
 const Popup = () => {
+
     const dispatch = useDispatch();
+
     const { openedPopup } = useSelector(store => store.divisionsNavigation);
-    // const { userData } = useSelector(store => store.orderData);
+    const { sendingAnApplication} = useSelector(store => store.orderData);
+    const { orderedProducts, sendingRequest } = useSelector(store => store.orderData);
     const popupElement = useRef(null);
     const containerElement = useRef(null);
+    const form = useRef(null);
+
 
     setTimeout(() => {
         popupElement.current.classList.add("popup_opened");
@@ -56,11 +65,6 @@ const Popup = () => {
         setDataForm({ ...dataForm, [e.target.name]: e.target.value });
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        dispatch(addUserData(dataForm));
-    }
 
     useEffect(() => {
         setSubmitDisabled(!dataForm.org.trim() || !dataForm.place.trim() || !dataForm.name.trim() || !dataForm.mail.trim() || !dataForm.phone.trim());
@@ -68,11 +72,48 @@ const Popup = () => {
     }, [dataForm]);
 
 
+    const orderData = useMemo(() => {
+        return orderedProducts.reduce((dataStr, current) => {
+            return dataStr + `${current.name} Количество: ${current.count.toString()}, Цена за штуку: ${current.price.toString()}${current.option === undefined ? '' : `, Комплектация: ${current.option === "local" ? "Локальная версия" : current.option === "network" ? "Сетевая версия на 6 рабочих мест" : "Сетевая версия «без ограничений»"}`}; \n \n`
+        }, ``)
+
+    }, [orderedProducts]);
+
+    const totalPrice = useMemo(() => {
+        return orderedProducts.reduce((summ, item) => summ += item.price * item.count, 0).toString() + ' ₽';
+
+    }, [orderedProducts]);
+
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        dispatch(clearError());
+        dispatch(sendRequest());
+
+        emailjs.sendForm('service_ocxcw7m', 'template_tkdr3cy', form.current, 'ggVhu4GbHdpVSB3AE')
+            .then((result) => {
+
+                dispatch(closeDivision());
+                dispatch(clearAllProducts());
+                handleClosePopup();  
+                dispatch(successfulSending());
+                dispatch(updateMessage('Заявка отправлена!')); 
+                window.scrollTo(0, 0);             
+
+            }, (error) => {
+                dispatch(failedSending());
+                dispatch(updateMessage(`Ошибка: ${error.status}. Пожалуйста, попробуйте позже`)); 
+            });
+
+    };
+
+
     return (
         <section className="popup" ref={popupElement} onClick={() => handleClosePopup()} >
             <div className="popupContainer" ref={containerElement} onClick={(e) => e.stopPropagation()}>
 
-                <form noValidate>
+                <form ref={form} onSubmit={sendEmail} noValidate>
                     <h1 className='popupTitle'>Заявка</h1>
                     <fieldset className='listContainer'>
                         <legend>Данные</legend>
@@ -105,14 +146,19 @@ const Popup = () => {
                         </ul>
                     </fieldset>
 
+                    <input type="hidden" name="data" value={orderData} />
+                    <input type="hidden" name="totalPrice" value={totalPrice} />
+
                     <div>
-                       {submitDisabled ? (<button className='submitButton submitButton_disabled' disabled >Отправить</button>): (<button className='popupSubmitButton' type="submit" onClick={(e) => handleSubmit(e)}>Отправить</button>) } 
+                        {submitDisabled ? (<button className='popupSubmitButton popupSubmitButton_disabled' disabled >Отправить</button>) : (sendingRequest ? (<p className='requestLoading'>Обработка данных</p>) : (<button className='popupSubmitButton' type="submit" >Отправить</button>))}
                         <p className='popupCaption'>* — Обязательные поля</p>
                     </div>
 
                 </form>
                 <div className='popup__toggle' onClick={() => handleClosePopup()} />
+                
             </div>
+            {sendingAnApplication === false && <MessageBoard /> }
 
         </section>
     )

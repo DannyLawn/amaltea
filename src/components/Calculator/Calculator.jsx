@@ -10,7 +10,6 @@ const Calculator = () => {
     const dispatch = useDispatch();
 
     const { divisionData } = useSelector(store => store.divisionsNavigation);
-
     const { allProducts } = useSelector(store => store.productsConstructor);
 
 
@@ -846,28 +845,13 @@ const Calculator = () => {
                                                             }
                                                         </>
                                                     )}
-
-                                            </>
-                                        )
-                                    }
-
-
-
-
-                                </>
-
-                            ) : (<p className='productsAttention'>Нет доступных</p>)
-                        }
-                    </ul>
-
-
-                    <div className='totalPriceContainer'>
-                        <div className='totalPrice'>
-                            <p className='priceCapture'>Цена:</p>
-                            <p className='priceNumber'>{totalPrice}</p>
-                            <p className='totalPriceCurrency'>₽</p>
-                        </div>
-                        {/* 
+                                                <div className='totalPriceContainer'>
+                                                    <div className='totalPrice'>
+                                                        <p className='priceCapture'>Цена:</p>
+                                                        <p className='priceNumber'>{totalPrice}</p>
+                                                        <p className='totalPriceCurrency'>₽</p>
+                                                    </div>
+                                                    {/* 
 
                         Секция скидки ( ОТКЛЮЧЕНО )
                         
@@ -883,15 +867,22 @@ const Calculator = () => {
                             </div>
                         </div> */}
 
-                    </div>
-                    
-                    <SubmitButton />
+                                                </div>
+                                                <SubmitButton />
+                                            </>
+                                        )
+                                    }
+                                </>
+
+                            ) : (<p className='productsAttention'>Нет доступных</p>)
+                        }
+                    </ul>
 
 
                 </div>
-                    <div className='specialOffer'>
-                        <h3 className='specialOffer__title'>возможно индивидуальное предложение, рабочее время: пн-пт 08:00–17:00</h3>
-                    </div>
+                <div className='specialOffer'>
+                    <h3 className='specialOffer__title'>возможно индивидуальное предложение, рабочее время: пн-пт 08:00–17:00</h3>
+                </div>
 
 
             </div>

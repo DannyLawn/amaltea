@@ -11,11 +11,11 @@ function Footer() {
                 <a className='contacts' href="tel:+79219843445">8-921-321-86-51</a>
             </div>
             <div className='footerLinkContainer'>
-                <a href='https://amaltea-spb.com/' target='_blank'>
-                    <img className='footerLogo' src={logoFooterAmaltea} />
+                <a href='https://amaltea-spb.com/' target='_blank'  rel="noreferrer">
+                    <img className='footerLogo' alt="Логотп Амалтея." src={logoFooterAmaltea} />
                 </a>
-                <a href='https://test-psy.ru/' target='_blank'>
-                    <img className='footerLogo' src={logoFooterVL} />
+                <a href='https://test-psy.ru/' target='_blank'  rel="noreferrer">
+                    <img className='footerLogo' alt="Логотп ВиЭль." src={logoFooterVL} />
                 </a>
             </div>
       </footer>
