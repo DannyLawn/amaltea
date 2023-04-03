@@ -157,13 +157,11 @@ const Calculator = () => {
             <div className='calculatorContainer'>
                 <h2 className='calculatorName'>Конструктор-калькулятор</h2>
                 <div className='calculateContainer'>
-                    <ul className='calculateList'>
+                    {
+                        allProducts.length ? (
 
-                        {
-                            allProducts.length ? (
-
-                                <>
-
+                            <>
+                                <ul className='calculateList'>
 
 
 
@@ -845,48 +843,30 @@ const Calculator = () => {
                                                             }
                                                         </>
                                                     )}
-                                                <div className='totalPriceContainer'>
-                                                    <div className='totalPrice'>
-                                                        <p className='priceCapture'>Цена:</p>
-                                                        <p className='priceNumber'>{totalPrice}</p>
-                                                        <p className='totalPriceCurrency'>₽</p>
-                                                    </div>
-                                                    {/* 
-
-                        Секция скидки ( ОТКЛЮЧЕНО )
-                        
-                        <div className='discountContainer'>
-                            <div className='totalDiscount'>
-                                <p className='discountCapture'>Размер скидки:</p>
-                                <p className='discountNumber'>{totalDiscountPrice.discount} %</p>
-                            </div>
-                            <div className='totalDiscountPrice'>
-                                <p className='priceDiscountCapture'>Итоговая цена:</p>
-                                <p className='priceDiscountNumber'>{totalDiscountPrice.price}</p>
-                                <p className='priceDiscountCurrency'>₽</p>
-                            </div>
-                        </div> */}
-
-                                                </div>
-                                                <SubmitButton />
                                             </>
                                         )
                                     }
-                                </>
 
-                            ) : (<p className='productsAttention'>Нет доступных</p>)
-                        }
-                    </ul>
+                                </ul>
+                                <div className='totalPriceContainer'>
+                                    <div className='totalPrice'>
+                                        <p className='priceCapture'>Цена:</p>
+                                        <p className='priceNumber'>{totalPrice}</p>
+                                        <p className='totalPriceCurrency'>₽</p>
+                                    </div>
+                                </div>
+                                <SubmitButton />
+                            </>
 
+                        ) : (<p className='productsAttention'>Нет доступных</p>)
+                    }
 
                 </div>
                 <div className='specialOffer'>
                     <h3 className='specialOffer__title'>возможно индивидуальное предложение, рабочее время: пн-пт 08:00–17:00</h3>
                 </div>
-
-
             </div>
-            
+
 
         </section>
     );
