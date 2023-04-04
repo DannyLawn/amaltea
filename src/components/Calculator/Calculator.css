@@ -113,6 +113,12 @@
     animation: blink2 1.4s linear infinite;
 }
 
+.giftBonusProduct {
+    color: rgb(176, 10, 82);
+    font-size: 18px;
+    font-weight: 500;
+}
+
 @keyframes blink2 {
     100% { color: rgba(227, 10, 53, 0); }
 }

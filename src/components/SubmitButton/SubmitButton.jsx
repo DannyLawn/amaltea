@@ -16,10 +16,16 @@ function SubmitButton() {
     const addedProducts = useMemo(() => {
         return allProducts.filter(product => product.count > 0);
     }, [allProducts]);
-
+/*
     const validity = useMemo( () => {
         return addedProducts.length > 0 ? true : false;
     },[addedProducts]);
+*/
+    const validity = useMemo(() => {
+        return addedProducts.reduce((summ, product) => summ += product.price, 0)
+    }, [addedProducts]);
+
+
 
      //попап
      const handleSubmit = (e) => {

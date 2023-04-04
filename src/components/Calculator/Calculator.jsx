@@ -196,22 +196,30 @@ const Calculator = () => {
                                                                         </div>
                                                                     )
                                                                 }
-                                                            </div>
-                                                            <div className='priceContainer'>
-                                                                <p className='productPrice'>{selectPrice(product.price)}</p>
-                                                                <p className='priceCurrency'>₽</p>
-                                                            </div>
-                                                            <div className='countContainer'>
-                                                                <div className='countTextContainer'>
-                                                                    <p className='productCount'>{product.count}</p>
-                                                                    <p className='productCountCapture'>компл.</p>
-                                                                </div>
 
-                                                                <div className='countButtonContainer'>
-                                                                    <button className='countButton' onClick={() => { dispatch(addProduct(product)) }}>+</button>
-                                                                    <button className='countButton' onClick={() => { dispatch(removeProduct(product)) }}>-</button>
-                                                                </div>
                                                             </div>
+                                                            {
+                                                                product.price === 0 ? (<p className='giftBonusProduct'>Обучение в подарок</p>) : (
+                                                                    <>
+                                                                        <div className='priceContainer'>
+                                                                            <p className='productPrice'>{selectPrice(product.price)}</p>
+                                                                            <p className='priceCurrency'>₽</p>
+                                                                        </div>
+                                                                        <div className='countContainer'>
+                                                                            <div className='countTextContainer'>
+                                                                                <p className='productCount'>{product.count}</p>
+                                                                                <p className='productCountCapture'>компл.</p>
+                                                                            </div>
+
+                                                                            <div className='countButtonContainer'>
+                                                                                <button className='countButton' onClick={() => { dispatch(addProduct(product)) }}>+</button>
+                                                                                <button className='countButton' onClick={() => { dispatch(removeProduct(product)) }}>-</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </>
+                                                                )
+                                                            }
+
                                                         </li>
                                                     ))
                                                 }
