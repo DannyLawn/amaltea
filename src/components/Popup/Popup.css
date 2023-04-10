@@ -18,6 +18,7 @@
     transition: opacity 0.6s, visibility 0s 0.6s ease-in;
   }
 
+
   .popup_opened {
     visibility: visible;
     pointer-events: all;
@@ -32,7 +33,7 @@
     background-color: #fff;
     width: 100%;
     max-width: 740px;
-    max-height: 80vh;
+    max-height: max-content;
     border-radius: 30px;
     padding: 33px 33px 13px;
     margin-top: 8px;
@@ -42,6 +43,13 @@
 	  opacity: 0;
 	  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
   }
+
+  @media screen and (max-width: 575px) {
+    .popupContainer {
+        padding: 20px 10px;
+    }
+  }
+
 
   .popupContainer_opened {
     will-change: transform, opacity;
@@ -68,6 +76,13 @@
     opacity: .6;
   }
 
+  @media screen and (max-width: 991px) {
+    .popup__toggle {
+        right: 5px;
+        top: -40px;
+    }
+}
+
   .popupTitle {
     font-size: 27px;
     font-weight: 600;
@@ -82,6 +97,7 @@
     margin: 0 auto;
   }
 
+
   .popupSubmitButton {
     margin-top: 40px;
     padding: 15px 45px;
@@ -95,6 +111,13 @@
     cursor: pointer;
     will-change: background-color;
     transition: all .1s ease-out;
+}
+
+@media screen and (max-width: 575px) {
+  .popupSubmitButton {
+      padding: 15px 25px;
+      max-width: 80%;
+  }
 }
 
 .popupSubmitButton:hover {
@@ -127,6 +150,19 @@
     cursor: default;
 }
 
+@media screen and (max-width: 575px) {
+  .requestLoading {
+    margin: 20px 0 0 30%;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .requestLoading {
+    margin: 20px 0 0 20%;
+  }
+}
+
 .requestLoading:after {
   overflow: hidden;
   display: inline-block;
@@ -157,6 +193,12 @@
     margin: 40px 0 0;
 }
 
+@media screen and (max-width: 575px) {
+  .popupCaption {
+    margin-top: 30px;
+  }
+}
+
 .popupList {
     display: flex;
     align-items: center;
@@ -175,6 +217,13 @@
     gap: 10px;
 }
 
+
+@media screen and (max-width: 575px) {
+  .popupListItem {
+      flex-direction: column;
+  }
+}
+
 .listItemTitle {
     align-self: flex-end;
     font-size: 16px;
@@ -182,6 +231,13 @@
     text-align: end;
     min-width: 140px;
   
+}
+
+@media screen and (max-width: 575px) {
+  .listItemTitle {
+      text-align: start;
+      align-self: flex-start;
+  }
 }
 
 .popupInput {
@@ -192,4 +248,10 @@
     border: none;
     outline: none;
     border-bottom: 1px solid #90385d;
+}
+
+@media screen and (max-width: 575px) {
+  .popupInput {
+      max-width: 90%;
+  }
 }

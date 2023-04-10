@@ -7,22 +7,57 @@
     font-weight: 600;
 }
 
+@media screen and (max-width: 575px) {
+    .calculatorTitle {
+        padding: 0 10px;
+    }
+}
+
 .calculatorSubtitle {
     margin: 0 auto;
     font-weight: 500;
     max-width: 680px;
 }
 
+
+
+@media screen and (max-width: 1199px) {
+    .calculatorSubtitle {
+        max-width: 100%;
+        padding: 0 90px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .calculatorSubtitle {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .calculatorSubtitle {
+        padding: 0 20px;
+    }
+}
+
 .calculatorContainer {
     display: flex;
     flex-direction: column;
-    margin: 60px 160px;
+    margin: 60px 10%;
     border: 2px solid rgba(0, 0, 0, 0.351);
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     padding: 20px 0 5px;
     background-color: #ffffff8d;
 }
+
+@media screen and (max-width: 1199px) {
+    .calculatorContainer {
+        margin: 30px 5%;
+
+    }
+}
+
 
 .calculatorName {
     margin: 0 0 20px;
@@ -32,11 +67,24 @@
     color: rgb(176, 10, 82);
 }
 
+@media screen and (max-width: 575px) {
+    .calculatorName {
+        padding: 0 10px;
+    }
+}
+
 .calculateContainer {
     background-color: #fff;
     border-radius: 10px;
     padding: 40px 0;
-    margin: 0 60px;
+    margin: 0 10%;
+}
+
+@media screen and (max-width: 575px) {
+    .calculateContainer {
+        padding: 0 0 40px;
+        margin: 0 1%;
+    }
 }
 
 .sectionMainTitle {
@@ -51,6 +99,12 @@
     color: #000000be;
 }
 
+@media screen and (max-width: 575px) {
+    .sectionMainTitle {
+        font-size: 18px;
+    }
+}
+
 .subsectionTitle {
     box-sizing: border-box;
     margin: 50px auto 20px;
@@ -63,45 +117,104 @@
 
 }
 
+@media screen and (max-width: 1199px) {
+    .subsectionTitle {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: keep-all break-all;
+        line-break: loose normal strict;
+        hyphens: none auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .subsectionTitle {
+        padding: 0;
+    }
+}
+
 .calculateList {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
 }
 
 .calculateItem {
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
     padding: 20px;
+    gap: 20px;
     border-bottom: 2px solid rgba(128, 128, 128, 0.241);
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+    .calculateItem {
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .calculateItem {
+        gap:0;
+    }
 }
 
 .itemName {
-    width: 420px;
+    width: 100%;
     font-size: 19px;
     font-weight: 500;
     margin: 0;
-    max-width: 420px;
+    max-width: 600px;
     text-align: left;
 }
 
+@media screen and (max-width: 1299px) {
+    .itemName {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .itemName {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .itemName {
+        text-align: center;
+    }
+}
+
+
+
 .nameOptionContainer {
     padding: 20px 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     border: 0;
 }
 
 .nameOption {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     font-size: 16px;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.811);
+}
+
+.nameOption label {
+    text-align: start;
 }
 
 .productsAttention {
@@ -120,12 +233,26 @@
 }
 
 @keyframes blink2 {
-    100% { color: rgba(227, 10, 53, 0); }
+    100% {
+        color: rgba(227, 10, 53, 0);
+    }
 }
 
 .priceContainer {
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 1299px) {
+    .priceContainer {
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .priceContainer {
+        margin: 0;
+    }
 }
 
 .productPrice {
@@ -144,6 +271,26 @@
     align-items: center;
     gap: 10px;
     width: 220px;
+}
+
+@media screen and (max-width: 1199px) {
+    .countContainer {
+        padding-bottom: 20px;
+    }
+}
+
+
+@media screen and (max-width: 991px) {
+    .countContainer {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .countContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 .countTextContainer {
@@ -203,6 +350,14 @@
     padding: 40px 40px 0;
 }
 
+@media screen and (max-width: 575px) {
+    .totalPriceContainer {
+        padding: 0;
+        padding-top: 40px;
+        align-items: center;
+    }
+}
+
 .totalPrice {
     display: flex;
     align-items: center;
@@ -231,7 +386,7 @@
     height: 50px;
     overflow: hidden;
     position: relative;
-    margin: 60px 5px 0;
+    margin: 50px 5px 0;
     background-color: #0000000b;
     border-radius: 0 0 30px 30px;
 }
@@ -251,14 +406,21 @@
     animation: marquee 24s linear infinite;
 }
 
+@media screen and (max-width: 1011px) {
+    .specialOffer {
+        display: none;
+    }
+}
+
 @keyframes marquee {
-    0%   {  
-    transform: translateX(100%); 		
+    0% {
+        transform: translateX(100%);
     }
-    100% { 
-    transform: translateX(-100%); 
+
+    100% {
+        transform: translateX(-100%);
     }
-   }
+}
 
 
 /* .totalDiscount {

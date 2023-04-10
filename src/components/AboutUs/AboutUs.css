@@ -2,6 +2,12 @@
     box-sizing: border-box;
     padding: 80px 0;
   }
+
+  @media screen and (max-width: 1199px) {
+    .AboutUs {
+      padding: 40px 0;
+    }
+  }
   
   .aboutUsText {
     margin: 0 auto 30px;
@@ -11,11 +17,31 @@
     cursor: default;
   }
 
+  @media screen and (max-width: 1199px) {
+    .aboutUsText {
+      padding: 0 50px;
+    }
+  }
+
+
+  @media screen and (max-width: 575px) {
+    .aboutUsText {
+     font-size: 16px;
+     padding: 0 20px;
+    }
+  }
+
   
   .aboutUsImage {
     max-width: 280px;
     will-change: opacity;
     transition: .3s all ease-in-out;
+  }
+
+  @media screen and (max-width: 575px) {
+    .aboutUsImage {
+      max-width: 240px;
+    }
   }
   
   .aboutUsLink {
