@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/amaltea/static/css/main.b212fe16.css",
+    "main.css": "/amaltea/static/css/main.db103f46.css",
     "main.js": "/amaltea/static/js/main.49da0e76.js",
     "static/media/back.jpg": "/amaltea/static/media/back.fb06b4d8426bcdabf3e1.jpg",
     "static/media/Montserrat-Bold.woff": "/amaltea/static/media/Montserrat-Bold.e7d34e28d091869b8442.woff",
@@ -17,11 +17,11 @@
     "static/media/footerLogoVL.png": "/amaltea/static/media/footerLogoVL.70656b8b7f3b928ad224.png",
     "index.html": "/amaltea/index.html",
     "static/media/close-icon.svg": "/amaltea/static/media/close-icon.039f1f5203f653b4bacd.svg",
-    "main.b212fe16.css.map": "/amaltea/static/css/main.b212fe16.css.map",
+    "main.db103f46.css.map": "/amaltea/static/css/main.db103f46.css.map",
     "main.49da0e76.js.map": "/amaltea/static/js/main.49da0e76.js.map"
   },
   "entrypoints": [
-    "static/css/main.b212fe16.css",
+    "static/css/main.db103f46.css",
     "static/js/main.49da0e76.js"
   ]
 }
