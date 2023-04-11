@@ -27,7 +27,7 @@
   }
   
   .division {
-    margin: 0 auto 60px;
+    margin: 0 auto 70px;
     width: 100%;
   }
 
@@ -79,8 +79,8 @@
 
   @media screen and (max-width: 575px) {
     .divisionSubtitle {
-        font-size: 16px;
-        padding: 10px 10px;
+        font-size: 15px;
+        padding: 5px 10px;
     }
 }
 
