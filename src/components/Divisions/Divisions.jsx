@@ -26,7 +26,7 @@ function Divisions() {
             <li className='division' key={division._key} divisionkey={division._key}>
               <div className='divisionLink' onClick={() => { clickDivision(division) }}>
                 <p className='divisionTitle'>{division.title}</p>
-                <p className='divisionSubtitle'>{division.subtitle}</p>
+                {division.subtitle ? (<p className='divisionSubtitle'>{division.subtitle}</p>): null}
               </div>
             </li>)
           )) : (<p className='divisionAttention'>Нет доступных</p>)

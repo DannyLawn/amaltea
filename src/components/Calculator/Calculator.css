@@ -51,9 +51,17 @@
     background-color: #ffffff8d;
 }
 
+@media screen and (max-width: 575px) {
+    .calculatorContainer {
+        margin: 30px 2%;
+
+    }
+}
+
 @media screen and (max-width: 1199px) {
     .calculatorContainer {
         margin: 30px 5%;
+        padding: 20px 5px 5px;
 
     }
 }
