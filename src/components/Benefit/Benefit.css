@@ -4,13 +4,13 @@
 
 @media screen and (max-width: 1199px) {
   .Benefit {
-      padding: 40px;
+      padding: 50px;
   }
 }
 
 @media screen and (max-width: 599px) {
   .Benefit {
-      padding: 40px 20px;
+      padding: 50px 20px;
   }
 }
 

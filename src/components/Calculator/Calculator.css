@@ -172,7 +172,7 @@
 
 @media screen and (max-width: 575px) {
     .calculateItem {
-        gap:0;
+        gap: 0;
     }
 }
 
@@ -328,6 +328,16 @@
     gap: 5px;
 }
 
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button:focus {
+    outline: none;
+}
+
 .countButton {
     box-sizing: border-box;
     width: 40px;
@@ -338,9 +348,6 @@
     border: 1px solid #828282;
     background-color: #F0F0F0;
     cursor: pointer;
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
-    appearance: none;
 }
 
 .countButton:hover {
