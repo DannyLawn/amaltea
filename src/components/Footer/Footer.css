@@ -1,6 +1,6 @@
 .Footer {
     box-sizing: border-box;
-    padding: 25px 60px;
+    padding: 30px 60px;
     display: flex;
     justify-content: space-around;
     color: #E2E2E4;
@@ -10,7 +10,7 @@
 
   @media screen and (max-width: 991px) {
     .Footer {
-        padding: 25px 30px;
+        padding: 30px 35px;
     }
 }
 
@@ -55,6 +55,12 @@
     font-weight: 400;
     color: #ffffffd7;
     cursor: default;
+  }
+
+  @media screen and (max-width: 599px) {
+    .footerPerson {
+      font-size: 16px;
+    }
   }
   
   .contactsContainer {

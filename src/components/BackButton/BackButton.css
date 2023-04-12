@@ -32,3 +32,17 @@
     font-weight: 600;
     font-size: 12px;
 }
+
+@media screen and (max-width: 575px) {
+    .backLogo {
+        max-width: 26px;
+    }
+
+    .backCaption {
+        font-size: 10px;
+    }
+    
+    .BackButton {
+        left: 10px;
+    }
+}

@@ -64,13 +64,12 @@
   font-size: 16px;
   text-align: start;
   cursor: default;
+  will-change: transform;
 }
-
-
 
 @media screen and (max-width: 599px) {
   .benefitText {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 
