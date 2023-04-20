@@ -1,6 +1,13 @@
 .Footer {
     box-sizing: border-box;
-    padding: 30px 60px;
+    padding: 30px 60px 15px;
+    color: #E2E2E4;
+    background-color: #1D1D1B;
+    flex: 0 0 auto;
+}
+
+.footerContainer {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     color: #E2E2E4;
@@ -10,12 +17,12 @@
 
   @media screen and (max-width: 991px) {
     .Footer {
-        padding: 30px 35px;
+        padding: 30px 35px 15px;
     }
 }
 
 @media screen and (max-width: 575px) {
-  .Footer {
+  .footerContainer {
       flex-direction: column;
       gap: 40px;
   }
@@ -28,13 +35,23 @@
     transition: .9s all ease-in-out;
   }
 
+  .footerDeveloperLogo {
+    width: 80px;
+    display: block;
+    margin: 30px  0 0 auto;
+    transition: all .1s ease-in-out;
+  }
+
+  .footerDeveloperLogo:hover {
+    opacity: .6;
+  }
 
   
   .footerLogo:hover {
     transform: scale(1.3);
   }
   
-  .footerLinkContainer {
+  .footerLinkAmalteaContainer {
     display: flex;
     gap: 60px;
     align-items: center;
@@ -42,7 +59,7 @@
   }
 
   @media screen and (max-width: 575px) {
-    .footerLinkContainer {
+    .footerLinkAmalteaContainer {
       gap: 40px;
       margin: 0 auto;
     }
