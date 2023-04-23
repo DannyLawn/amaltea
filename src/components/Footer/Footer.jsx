@@ -1,6 +1,6 @@
 import logoFooterAmaltea from '../../images/footerLogo.png';
 import logoFooterVL from '../../images/footerLogoVL.png';
-import logoFooterGlobotech from '../../images/developmentIcon.png';
+// import logoFooterGlobotech from '../../images/developmentIcon.png';
 import './Footer.css';
 
 function Footer() {
@@ -21,11 +21,11 @@ function Footer() {
                     </a>
                 </div>
             </div>
-            <div className='developmentLogoContainer'>
+            {/* <div className='developmentLogoContainer'>
                 <a href='https://dannylawn.github.io/globotech/' target='_blank' rel="noreferrer">
                     <img className='footerDeveloperLogo' alt="Логотп Глоботэк." src={logoFooterGlobotech} />
                 </a>
-            </div>
+            </div> */}
 
         </footer>
 
